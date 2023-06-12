@@ -1,0 +1,108 @@
+.body{
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*-------------------------------TEXTOS-------------------------------------*/
+
+.title{
+    text-align: center;
+}
+
+.h1{
+    text-align: center;
+}
+
+
+.p{
+    text-align: center;
+}
+/*--------------------------TABELA,IMGS,LINK,BUTTONS------------------------------*/
+.table{
+    text-align: center;
+    background-color: #EEEED1;
+    border-radius: 10px;
+}
+
+
+
+.imgs{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+.button{
+    background-color: #CDCDB4; 
+    border: white;
+    border-radius: 30%;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+.navitens{
+    display: inline;
+    float: left;
+    cursor: pointer;
+    
+
+}
+
+.navlinks{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    padding: 8px;
+    background-color: #CDCDB4;
+}
+
+
+/*-----------------------------------INPUTS--------------------------------------------------*/
+.inputbuttons{
+    background-color: #CDCDB4;
+    border: 1px;
+    color: black;
+    padding: 16px 32px;
+    cursor: pointer;
+    border-radius: 30%;
+    align-items: center;
+
+}
+
+.inputtext{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+    .inputdiv{
+        width: 320px;
+        padding: 10px;
+        border: 5px solid black;
+        margin: 0;
+
+    }

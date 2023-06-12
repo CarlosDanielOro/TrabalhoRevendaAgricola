@@ -1,0 +1,64 @@
+                    Tabela cidade
+CREATE TABLE cidade (
+IDcidade integer NOT null,
+uf VARCHAR(3) NOT null,
+nome VARCHAR(40) NOT null,
+PRIMARY KEY (IDcidade)
+);
+                    Tabela formapaga
+CREATE TABLE formapaga ( 
+IDpaga integer NOT null,
+juro integer NOT null,
+tipo varchar(15) NOT null,
+PRIMARY KEY (IDpaga)
+);
+                    Tabela vendedor
+CREATE TABLE vendedor (
+IDvendedor integer NOT null,
+nome varchar(40) NOT null,
+telefone integer NOT null,
+comissao integer NOT null,
+PRIMARY KEY (IDvendedor)
+);
+                    Tabela fabrica
+CREATE TABLE fabrica (
+IDmarca integer NOT null,
+nome varchar(20) NOT null,
+PRIMARY KEY (IDmarca)
+);
+                    Tabela cliente
+CREATE TABLE cliente (
+IDcliente integer NOT null,
+cpf varchar(11) NOT null,
+nome varchar(40) NOT null,
+telefone varchar(15) NOT null,
+IDcidade integer NOT null,
+PRIMARY KEY (IDcliente),
+FOREIGN KEY (IDcidade) REFERENCES cidade
+);
+                    Tabela maquina
+CREATE TABLE maquina (
+IDmaquina integer NOT null,
+nome varchar(15) NOT null,
+anofabri integer NOT null,
+modelo varchar(20) NOT null,
+preco varchar(25) NOT null,
+qntestoque integer NOT null,
+IDmarca integer NOT null,
+PRIMARY KEY (IDmaquina),
+FOREIGN KEY (IDmarca) REFERENCES fabrica
+);
+                    Tabela venda
+CREATE TABLE venda (
+NumeroVenda integer NOT null,
+data date NOT null,
+IDpaga integer NOT null,
+IDcliente integer NOT null,
+IDvendedor integer NOT null,
+IDmaquina integer NOT null,
+PRIMARY KEY (NumeroVenda),
+FOREIGN KEY (IDpaga) REFERENCES formapaga,
+FOREIGN KEY (IDcliente) REFERENCES cliente,
+FOREIGN KEY (IDvendedor) REFERENCES vendedor,
+FOREIGN KEY (IDmaquina) REFERENCES maquina
+);
